@@ -239,7 +239,7 @@ h2{
     position: relative;
 }
 .sec1 .des{
-    font-size: 40px;
+    font-size: clamp(30px,6vw,40px);
   font-family: "Audiowide", sans-serif;
   letter-spacing: 2.5px;
   text-align: center;
@@ -258,8 +258,9 @@ h2{
     position:absolute;
     z-index:9999;
     bottom:50px;
-    left:10%;
-    font-size:40px;
+    transform: translateX(-50%);
+    left:50%;
+    font-size:clamp(30px,6vw,40px);
     font-weight:900;
     letter-spacing:4px;
     text-transform:uppercase;
@@ -1541,10 +1542,10 @@ h2{
 /***** SEC0 QUERY *****/
 @media only screen and (min-width:300px) and (max-width:750px){
     .sec0{
-        height: 165vh;
+        height: 170vh;
     }
     .top{
-        min-height: 165vh;
+        min-height: 170vh;
     }
     .head,.head1{
         /* font-size: 40px; */
@@ -1554,8 +1555,8 @@ h2{
     }
 
     .round{
-        height: 260px;
-        width: 260px;
+        height: 240px;
+        width: 240px;
         top: 33%;
         z-index: 1;
     }
@@ -1849,39 +1850,12 @@ h2{
         opacity: 0.20;
     }
     .trip1 {
-        animation-name: mobileFromLeft;
-        animation-duration: 1ms;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-        animation-timeline: view(block);
-        animation-range: entry 0% cover 35%;
+        animation: none;
     }
     .trip2 {
-        animation-name: mobileFromRight;
-        animation-duration: 1ms;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-        animation-timeline: view(block);
-        animation-range: entry 0% cover 35%;
-    }
+        animation: none;
 
-    @keyframes mobileFromLeft {
-        from {
-            transform: translateX(-150px);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-    @keyframes mobileFromRight {
-        from {
-            transform: translateX(150px);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-
+}
 }
 
 @media only screen and (min-width:600px) and (max-width:1100px){
@@ -1989,7 +1963,7 @@ h2{
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .sec3 {
         padding: 35px 12px;
     }
@@ -2012,6 +1986,9 @@ h2{
         font-size: 15px;
         line-height: 1.6;
         width: 100%;
+    }
+    .content,.content1{
+        display: none;
     }
 .trip1 img {
     clip-path: none;
